@@ -94,16 +94,3 @@ function validationUrl() {
     webUrl.classList.remove('is-valid')
   }
 }
-
-function validationUrl() {
-  var text= webUrl;
-  var regex=/^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
-  if (regex.test(text) ==true) {
-    webUrl.classList.add('is-valid')
-    webUrl.classList.remove('is-invalid')
-    return true;
-  }else{
-    webUrl.classList.add('is-invalid')
-    webUrl.classList.remove('is-valid')
-  }
-}
