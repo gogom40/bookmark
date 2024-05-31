@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>BookMark</title>
+  </head>
+  <body>
+    <h1 class="text-center fw-bold m-4 p-5">Bookmarker</h1>
+    <div
+      class="container form-group d-flex flex-column justify-content-center align-items-center py-2"
+    >
+      <div class="sentense d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-bookmark fa-lg m-2" style="color: #3ca55c"></i>
+        <h2 class="my-1">Bookmark your favorite sites</h2>
+        <i class="fa-solid fa-bookmark fa-lg m-2" style="color: #b5ac49"></i>
+      </div>
+      <div
+        class="webName d-flex flex-column justify-content-center m-auto py-1"
+      >
+        <label for="webName"
+          ><i class="fa-solid fa-book-bookmark mt-3" style="color: #000000"></i
+          ><span class="fw-bold ms-2">Site Name</span></label
+        >
+        <input
+          type="text"
+          id="webName"
+          oninput="validationName()"
+          class="form-control mt-3 pt-2 "
+          placeholder="Bookmark Name"
+          required
+        />
+      </div>
+      <div class="webUrl d-flex flex-column justify-content-center m-auto py-1">
+        <label for="webUrl" class=""
+          ><i class="fa-solid fa-link mt-3" style="color: #000000"></i
+          ><span class="fw-bold ms-2">Site URL</span></label
+        >
+        <input
+          type="url"
+          id="webUrl"
+          oninput="validationUrl()"
+          name="webUrl"
+          class="form-control mt-3 pt-2"
+          placeholder="Website URL, Ex: https://www.google.com"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-danger my-3" onclick="addWeb();">
+        Submit
+      </button>
+
+    </div>
+    <table class="table mt-5 mb-5 text-center m-auto fw-bolder">
+      <thead>
+        <th class="">Index</th>
+        <th class="">Website Name</th>
+        <th class="">Visit</th>
+        <th class="">Delete</th>
+      </thead>
+      <tbody id="Data"></tbody>
+    </table>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
